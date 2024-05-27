@@ -1,0 +1,458 @@
+docs_dir: docs
+
+site_name: Serhat Çelik
+site_url: https://x3525.readthedocs.io
+
+copyright: Copyright &copy; Serhat Çelik
+
+use_directory_urls: false
+
+strict: true
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+theme:
+  name: material
+  language: tr
+  custom_dir: overrides
+  features:
+  - content.code.copy
+  - header.autohide
+  - navigation.footer
+  - navigation.indexes
+  - navigation.sections
+  - navigation.tabs
+  - navigation.tabs.sticky
+  - navigation.top
+  - search.share
+  - search.suggest
+  palette:
+  - media: "(prefers-color-scheme)"
+    toggle:
+      icon: material/link
+      name: Açık temaya geç
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: deep purple
+    accent: deep purple
+    toggle:
+      icon: material/toggle-switch
+      name: Koyu temaya geç
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: deep purple
+    accent: deep purple
+    toggle:
+      icon: material/toggle-switch-off-outline
+      name: Sistem temasına geç
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  favicon: assets/favicon.png
+  logo: assets/avatar.png
+
+plugins:
+- glightbox:
+    effect: none
+    slide_effect: none
+    zoomable: true
+    draggable: false
+    auto_caption: false
+    caption_position: bottom
+    background: none
+- offline:
+    enabled: false
+- search
+
+extra:
+  generator: true
+  homepage: index.html
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/x3525
+    name: GitHub
+  - icon: fontawesome/brands/python
+    link: https://pypi.org/user/serhat.celik/
+    name: Python Package Index
+  - icon: fontawesome/brands/linkedin
+    link: https://www.linkedin.com/in/celik-serhat/
+    name: LinkedIn
+
+extra_css:
+- stylesheets/extra.css
+
+markdown_extensions:
+- abbr
+- admonition
+- attr_list
+- md_in_html
+- tables
+- toc:
+    permalink: "#"
+    permalink_title: Kalıcı link
+    toc_depth: 6
+- pymdownx.critic
+- pymdownx.details
+- pymdownx.highlight:
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+- pymdownx.inlinehilite
+- pymdownx.keys:
+    key_map:
+      lower-a: "a"
+      lower-b: "b"
+      lower-c: "c"
+      lower-d: "d"
+      lower-e: "e"
+      lower-f: "f"
+      lower-g: "g"
+      lower-h: "h"
+      lower-i: "i"
+      lower-j: "j"
+      lower-k: "k"
+      lower-l: "l"
+      lower-m: "m"
+      lower-n: "n"
+      lower-o: "o"
+      lower-p: "p"
+      lower-q: "q"
+      lower-r: "r"
+      lower-s: "s"
+      lower-t: "t"
+      lower-u: "u"
+      lower-v: "v"
+      lower-w: "w"
+      lower-x: "x"
+      lower-y: "y"
+      lower-z: "z"
+- pymdownx.smartsymbols
+- pymdownx.snippets:
+    check_paths: true
+- pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: !!python/name:pymdownx.superfences.fence_code_format
+- pymdownx.tabbed:
+    alternate_style: true
+- pymdownx.tasklist:
+    custom_checkbox: true
+
+watch:
+- overrides
+
+nav:
+- index.md
+- Information Security Foundations:
+  - information-security-foundations/index.md
+  - Introduction to Academy:
+    - information-security-foundations/introduction-to-academy/index.md
+  - Learning Process:
+    - information-security-foundations/learning-process/index.md
+    - Mindset:
+      - information-security-foundations/learning-process/mindset/think-outside-the-box.md
+      - information-security-foundations/learning-process/mindset/occams-razor.md
+  - Setting Up:
+    - information-security-foundations/setting-up/index.md
+    - Introduction:
+      - information-security-foundations/setting-up/introduction/organization.md
+      - information-security-foundations/setting-up/introduction/containers.md
+    - Operating Systems:
+      - information-security-foundations/setting-up/operating-systems/linux.md
+      - information-security-foundations/setting-up/operating-systems/windows.md
+  - Linux Fundamentals:
+    - information-security-foundations/linux-fundamentals/index.md
+    - Introduction:
+      - information-security-foundations/linux-fundamentals/introduction/linux-structure.md
+    - The Shell:
+      - information-security-foundations/linux-fundamentals/the-shell/prompt-description.md
+      - information-security-foundations/linux-fundamentals/the-shell/getting-help.md
+      - information-security-foundations/linux-fundamentals/the-shell/system-information.md
+    - Workflow:
+      - information-security-foundations/linux-fundamentals/workflow/navigation.md
+      - information-security-foundations/linux-fundamentals/workflow/working-with-files-and-directories.md
+      - information-security-foundations/linux-fundamentals/workflow/find-files-and-directories.md
+      - information-security-foundations/linux-fundamentals/workflow/file-descriptors-and-redirections.md
+      - information-security-foundations/linux-fundamentals/workflow/filter-contents.md
+      - information-security-foundations/linux-fundamentals/workflow/permission-management.md
+    - System Management:
+      - information-security-foundations/linux-fundamentals/system-management/user-management.md
+      - information-security-foundations/linux-fundamentals/system-management/service-and-process-management.md
+      - information-security-foundations/linux-fundamentals/system-management/task-scheduling.md
+      - information-security-foundations/linux-fundamentals/system-management/network-services.md
+      - information-security-foundations/linux-fundamentals/system-management/backup-and-restore.md
+      - information-security-foundations/linux-fundamentals/system-management/file-system-management.md
+      - information-security-foundations/linux-fundamentals/system-management/containerization.md
+    - Linux Networking:
+      - information-security-foundations/linux-fundamentals/linux-networking/network-configuration.md
+    - Linux Hardening:
+      - information-security-foundations/linux-fundamentals/linux-hardening/linux-security.md
+      - information-security-foundations/linux-fundamentals/linux-hardening/system-logs.md
+  - Windows Fundamentals:
+    - information-security-foundations/windows-fundamentals/index.md
+    - Introduction:
+      - information-security-foundations/windows-fundamentals/introduction/introduction-to-windows.md
+    - Core of the Operating Systems:
+      - information-security-foundations/windows-fundamentals/core-of-the-operating-system/operating-system-structure.md
+      - information-security-foundations/windows-fundamentals/core-of-the-operating-system/file-system.md
+    - Working with Services & Processes:
+      - information-security-foundations/windows-fundamentals/working-with-services-and-processes/windows-services-and-processes.md
+    - Interacting with Windows:
+      - information-security-foundations/windows-fundamentals/interacting-with-windows/windows-sessions.md
+      - information-security-foundations/windows-fundamentals/interacting-with-windows/interacting-with-the-windows-operating-system.md
+    - Diving Deeper & Close Out:
+      - information-security-foundations/windows-fundamentals/diving-deeper-and-close-out/windows-security.md
+  - Introduction to Networking:
+    - information-security-foundations/introduction-to-networking/index.md
+    - Introduction:
+      - information-security-foundations/introduction-to-networking/introduction/networking-overview.md
+    - Networking Structure:
+      - information-security-foundations/introduction-to-networking/networking-structure/network-types.md
+      - information-security-foundations/introduction-to-networking/networking-structure/network-topologies.md
+      - information-security-foundations/introduction-to-networking/networking-structure/proxies.md
+    - Networking Workflow:
+      - information-security-foundations/introduction-to-networking/networking-workflow/networking-models.md
+      - information-security-foundations/introduction-to-networking/networking-workflow/the-osi-model.md
+      - information-security-foundations/introduction-to-networking/networking-workflow/the-tcp-ip-model.md
+    - Addressing:
+      - information-security-foundations/introduction-to-networking/addressing/ip-addresses.md
+      - information-security-foundations/introduction-to-networking/addressing/subnetting.md
+      - information-security-foundations/introduction-to-networking/addressing/mac-addresses.md
+    - Protocols & Terminology:
+      - information-security-foundations/introduction-to-networking/protocols-and-terminology/wireless-networks.md
+  - Intro to Network Traffic Analysis:
+    - information-security-foundations/intro-to-network-traffic-analysis/index.md
+    - Introduction:
+      - information-security-foundations/intro-to-network-traffic-analysis/introduction/networking-primer-layers-1-4.md
+      - information-security-foundations/intro-to-network-traffic-analysis/introduction/networking-primer-layers-5-7.md
+    - Analysis:
+      - information-security-foundations/intro-to-network-traffic-analysis/analysis/analysis-in-practice.md
+    - Tcpdump:
+      - information-security-foundations/intro-to-network-traffic-analysis/tcpdump/tcpdump-fundamentals.md
+      - information-security-foundations/intro-to-network-traffic-analysis/tcpdump/tcpdump-packet-filtering.md
+  - Introduction to Active Directory:
+    - information-security-foundations/introduction-to-active-directory/index.md
+    - Active Directory Overview:
+      - information-security-foundations/introduction-to-active-directory/active-directory-overview/why-active-directory.md
+      - information-security-foundations/introduction-to-active-directory/active-directory-overview/active-directory-research-over-the-years.md
+    - Active Directory Fundamentals:
+      - information-security-foundations/introduction-to-active-directory/active-directory-fundamentals/active-directory-structure.md
+      - information-security-foundations/introduction-to-active-directory/active-directory-fundamentals/active-directory-terminology.md
+      - information-security-foundations/introduction-to-active-directory/active-directory-fundamentals/active-directory-objects.md
+      - information-security-foundations/introduction-to-active-directory/active-directory-fundamentals/active-directory-functionality.md
+    - Active Directory Protocols:
+      - information-security-foundations/introduction-to-active-directory/active-directory-protocols/kerberos-dns-ldap-msrpc.md
+      - information-security-foundations/introduction-to-active-directory/active-directory-protocols/ntlm-authentication.md
+    - All About Users:
+      - information-security-foundations/introduction-to-active-directory/all-about-users/active-directory-rights-and-privileges.md
+  - Introduction to Web Applications:
+    - information-security-foundations/introduction-to-web-applications/index.md
+    - Introduction to Web Applications:
+      - information-security-foundations/introduction-to-web-applications/introduction-to-web-applications/introduction.md
+      - information-security-foundations/introduction-to-web-applications/introduction-to-web-applications/web-application-layout.md
+      - information-security-foundations/introduction-to-web-applications/introduction-to-web-applications/front-end-vs.-back-end.md
+    - Front End Components:
+      - information-security-foundations/introduction-to-web-applications/front-end-components/html.md
+    - Front End Vulnerabilities:
+      - information-security-foundations/introduction-to-web-applications/front-end-vulnerabilities/sensitive-data-exposure.md
+      - information-security-foundations/introduction-to-web-applications/front-end-vulnerabilities/html-injection.md
+      - information-security-foundations/introduction-to-web-applications/front-end-vulnerabilities/cross-site-scripting-xss.md
+      - information-security-foundations/introduction-to-web-applications/front-end-vulnerabilities/cross-site-request-forgery-csrf.md
+    - Back End Components:
+      - information-security-foundations/introduction-to-web-applications/back-end-components/back-end-servers.md
+      - information-security-foundations/introduction-to-web-applications/back-end-components/web-servers.md
+      - information-security-foundations/introduction-to-web-applications/back-end-components/development-frameworks-and-apis.md
+    - Back End Vulnerabilities:
+      - information-security-foundations/introduction-to-web-applications/back-end-vulnerabilities/common-web-vulnerabilities.md
+      - information-security-foundations/introduction-to-web-applications/back-end-vulnerabilities/public-vulnerabilities.md
+  - Web Requests:
+    - information-security-foundations/web-requests/index.md
+    - HTTP Fundamentals:
+      - information-security-foundations/web-requests/http-fundamentals/hypertext-transfer-protocol-http.md
+      - information-security-foundations/web-requests/http-fundamentals/hypertext-transfer-protocol-secure-https.md
+      - information-security-foundations/web-requests/http-fundamentals/http-requests-and-responses.md
+      - information-security-foundations/web-requests/http-fundamentals/http-headers.md
+    - HTTP Methods:
+      - information-security-foundations/web-requests/http-methods/http-methods-and-codes.md
+      - information-security-foundations/web-requests/http-methods/get.md
+      - information-security-foundations/web-requests/http-methods/post.md
+      - information-security-foundations/web-requests/http-methods/crud-api.md
+- Penetration Tester:
+  - penetration-tester/index.md
+  - Getting Started:
+    - penetration-tester/getting-started/index.md
+    - Pentesting Basics:
+      - penetration-tester/getting-started/pentesting-basics/common-terms.md
+      - penetration-tester/getting-started/pentesting-basics/basic-tools.md
+      - penetration-tester/getting-started/pentesting-basics/service-scanning.md
+      - penetration-tester/getting-started/pentesting-basics/web-enumeration.md
+      - penetration-tester/getting-started/pentesting-basics/public-exploits.md
+      - penetration-tester/getting-started/pentesting-basics/types-of-shells.md
+      - penetration-tester/getting-started/pentesting-basics/privilege-escalation.md
+      - penetration-tester/getting-started/pentesting-basics/transferring-files.md
+    - Attacking Your First Box:
+      - penetration-tester/getting-started/attacking-your-first-box/nibbles-enumeration.md
+      - penetration-tester/getting-started/attacking-your-first-box/nibbles-web-footprinting.md
+  - Vulnerability Assessment:
+    - penetration-tester/vulnerability-assessment/index.md
+    - Security Assessments:
+      - penetration-tester/vulnerability-assessment/security-assessments/vulnerability-assessment.md
+    - Nessus:
+      - penetration-tester/vulnerability-assessment/nessus/vulnerability-scanning-overview.md
+      - penetration-tester/vulnerability-assessment/nessus/getting-started-with-nessus.md
+      - penetration-tester/vulnerability-assessment/nessus/nessus-scan.md
+      - penetration-tester/vulnerability-assessment/nessus/advanced-settings.md
+      - penetration-tester/vulnerability-assessment/nessus/nessus-skills-assessment.md
+    - OpenVAS:
+      - penetration-tester/vulnerability-assessment/openvas/getting-started-with-openvas.md
+      - penetration-tester/vulnerability-assessment/openvas/openvas-scan.md
+      - penetration-tester/vulnerability-assessment/openvas/openvas-skills-assessment.md
+  - File Transfers:
+    - penetration-tester/file-transfers/index.md
+    - File Transfer Methods:
+      - penetration-tester/file-transfers/file-transfer-methods/windows-file-transfer-methods.md
+      - penetration-tester/file-transfers/file-transfer-methods/linux-file-transfer-methods.md
+      - penetration-tester/file-transfers/file-transfer-methods/transferring-files-with-code.md
+      - penetration-tester/file-transfers/file-transfer-methods/miscellaneous-file-transfer-methods.md
+      - penetration-tester/file-transfers/file-transfer-methods/protected-file-transfers.md
+      - penetration-tester/file-transfers/file-transfer-methods/catching-files-over-https.md
+      - penetration-tester/file-transfers/file-transfer-methods/living-off-the-land.md
+    - Detect or Be Detected:
+      - penetration-tester/file-transfers/detect-or-be-detected/detection.md
+      - penetration-tester/file-transfers/detect-or-be-detected/evading-detection.md
+  - Using the Metasploit Framework:
+    - penetration-tester/using-the-metasploit-framework/index.md
+    - Introduction:
+      - penetration-tester/using-the-metasploit-framework/introduction/introduction-to-msfconsole.md
+    - MSF Components:
+      - penetration-tester/using-the-metasploit-framework/msf-components/modules.md
+      - penetration-tester/using-the-metasploit-framework/msf-components/targets.md
+      - penetration-tester/using-the-metasploit-framework/msf-components/payloads.md
+      - penetration-tester/using-the-metasploit-framework/msf-components/encoders.md
+      - penetration-tester/using-the-metasploit-framework/msf-components/databases.md
+      - penetration-tester/using-the-metasploit-framework/msf-components/plugins.md
+    - MSF Sessions:
+      - penetration-tester/using-the-metasploit-framework/msf-sessions/sessions.md
+      - penetration-tester/using-the-metasploit-framework/msf-sessions/meterpreter.md
+    - Additional Features:
+      - penetration-tester/using-the-metasploit-framework/additional-features/firewall-and-ids-ips-evasion.md
+  - Attacking Web Applications with Ffuf:
+    - penetration-tester/attacking-web-applications-with-ffuf/index.md
+    - Introduction:
+      - penetration-tester/attacking-web-applications-with-ffuf/introduction/web-fuzzing.md
+    - Basic Fuzzing:
+      - penetration-tester/attacking-web-applications-with-ffuf/basic-fuzzing/directory-fuzzing.md
+      - penetration-tester/attacking-web-applications-with-ffuf/basic-fuzzing/page-fuzzing.md
+      - penetration-tester/attacking-web-applications-with-ffuf/basic-fuzzing/recursive-fuzzing.md
+    - Domain Fuzzing:
+      - penetration-tester/attacking-web-applications-with-ffuf/domain-fuzzing/sub-domains.md
+      - penetration-tester/attacking-web-applications-with-ffuf/domain-fuzzing/vhost-fuzzing.md
+      - penetration-tester/attacking-web-applications-with-ffuf/domain-fuzzing/filtering-results.md
+    - Parameter Fuzzing:
+      - penetration-tester/attacking-web-applications-with-ffuf/parameter-fuzzing/parameter-fuzzing-get.md
+      - penetration-tester/attacking-web-applications-with-ffuf/parameter-fuzzing/parameter-fuzzing-post.md
+      - penetration-tester/attacking-web-applications-with-ffuf/parameter-fuzzing/value-fuzzing.md
+  - SQL Injection Fundamentals:
+    - penetration-tester/sql-injection-fundamentals/index.md
+  - File Inclusion:
+    - penetration-tester/file-inclusion/index.md
+    - Introduction:
+      - penetration-tester/file-inclusion/introduction/intro-to-file-inclusions.md
+    - File Disclosure:
+      - penetration-tester/file-inclusion/file-disclosure/local-file-inclusion-lfi.md
+      - penetration-tester/file-inclusion/file-disclosure/basic-bypasses.md
+      - penetration-tester/file-inclusion/file-disclosure/php-filters.md
+    - Remote Code Execution:
+      - penetration-tester/file-inclusion/remote-code-execution/php-wrappers.md
+      - penetration-tester/file-inclusion/remote-code-execution/remote-file-inclusion-rfi.md
+    - Automation and Prevention:
+      - penetration-tester/file-inclusion/automation-and-prevention/automated-scanning.md
+      - penetration-tester/file-inclusion/automation-and-prevention/file-inclusion-prevention.md
+- Modules:
+  - modules/index.md
+  - JavaScript Deobfuscation:
+    - modules/javascript-deobfuscation/index.md
+    - Introduction:
+      - modules/javascript-deobfuscation/introduction/source-code.md
+    - Obfuscation:
+      - modules/javascript-deobfuscation/obfuscation/code-obfuscation.md
+      - modules/javascript-deobfuscation/obfuscation/basic-obfuscation.md
+      - modules/javascript-deobfuscation/obfuscation/advanced-obfuscation.md
+      - modules/javascript-deobfuscation/obfuscation/deobfuscation.md
+    - Deobfuscation Examples:
+      - modules/javascript-deobfuscation/deobfuscation-examples/decoding.md
+  - MacOS Fundamentals:
+    - modules/macos-fundamentals/index.md
+    - MacOS Basic Usage:
+      - modules/macos-fundamentals/macos-basic-usage/graphical-user-interface.md
+      - modules/macos-fundamentals/macos-basic-usage/system-hierarchy.md
+      - modules/macos-fundamentals/macos-basic-usage/networking.md
+    - Extending MacOS:
+      - modules/macos-fundamentals/extending-macos/application-management.md
+  - Stack-Based Buffer Overflows on Linux x86:
+    - modules/stack-based-buffer-overflows-on-linux-x86/index.md
+  - Stack-Based Buffer Overflows on Windows x86:
+    - modules/stack-based-buffer-overflows-on-windows-x86/index.md
+- Write-Ups:
+  - write-ups/index.md
+  - Starting Point:
+    - write-ups/starting-point/index.md
+    - Tier 0:
+      - write-ups/starting-point/tier-0/meow.md
+      - write-ups/starting-point/tier-0/fawn.md
+      - write-ups/starting-point/tier-0/dancing.md
+      - write-ups/starting-point/tier-0/redeemer.md
+    - Tier 1:
+      - write-ups/starting-point/tier-1/appointment.md
+      - write-ups/starting-point/tier-1/sequel.md
+      - write-ups/starting-point/tier-1/crocodile.md
+      - write-ups/starting-point/tier-1/responder.md
+      - write-ups/starting-point/tier-1/three.md
+  - Machines:
+    - write-ups/machines/index.md
+    - Easy:
+      - write-ups/machines/easy/devvortex.md
+      - write-ups/machines/easy/cozyhosting.md
+      - write-ups/machines/easy/codify.md
+      - write-ups/machines/easy/analytics.md
+      - write-ups/machines/easy/keeper.md
+- Misc:
+  - misc/index.md
+  - Cybersecurity:
+    - misc/cybersecurity/index.md
+    - General:
+      - misc/cybersecurity/general/n8n-workflow-automation-tool.md
+      - misc/cybersecurity/general/port-numbers.md
+      - misc/cybersecurity/general/useful-shortcuts.md
+    - Linux:
+      - misc/cybersecurity/linux/add-windows-to-grub-menu.md
+      - misc/cybersecurity/linux/apt-incompatible-with-kernel.md
+      - misc/cybersecurity/linux/arch-linux-installation-guide.md
+      - misc/cybersecurity/linux/bash-prompt-command.md
+      - misc/cybersecurity/linux/bluetooth.md
+      - misc/cybersecurity/linux/open-vpn-tun-tap-error.md
+      - misc/cybersecurity/linux/soft-link-and-hard-link.md
+      - misc/cybersecurity/linux/ssh2-msg-kex-ecdh-reply.md
+      - misc/cybersecurity/linux/tmux-basics.md
+      - misc/cybersecurity/linux/vim-basics.md
+    - Windows:
+      - misc/cybersecurity/windows/hide-a-user-from-login-screen.md
+      - misc/cybersecurity/windows/powershell-module-import.md
+      - misc/cybersecurity/windows/registry.md
+      - misc/cybersecurity/windows/ssh-key-based-authentication.md
+      - misc/cybersecurity/windows/windows-subsystem-for-linux.md
+  - Programming:
+    - misc/programming/index.md
+    - C:
+      - misc/programming/c/structure.md
+      - misc/programming/c/execution-process.md
+      - misc/programming/c/constants.md
+      - misc/programming/c/variables.md
+      - misc/programming/c/operators.md
+    - Python:
+      - misc/programming/python/packaging-python-projects.md

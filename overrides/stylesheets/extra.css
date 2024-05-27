@@ -1,0 +1,14 @@
+img {
+    display: block;
+    margin: auto;
+}
+
+table th,
+table td:not(:last-child) {
+    white-space: nowrap;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+    font-size: medium;
+}
