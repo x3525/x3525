@@ -861,7 +861,7 @@ exit
 
 ### Login as USER
 
-Bu kısımda bahsedilen işlemleri gerçekleştirmek için standart kullanıcı (`my-cool-hostname`) olarak oturum açılmalıdır.
+Bu kısımda bahsedilen işlemleri gerçekleştirmek için standart kullanıcı (`my-cool-username`) olarak oturum açılmalıdır.
 
 #### Git
 
